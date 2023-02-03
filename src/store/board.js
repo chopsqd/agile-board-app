@@ -1,11 +1,12 @@
 import {types, flow, getParent} from 'mobx-state-tree'
 import apiCall from '../api'
+import {User} from "./users";
 
 const Task = types.model('Task', {
     id: types.identifier,
     title: types.string,
     description: types.string,
-    assignee: types.string
+    assignee: types.safeReference(User)
 })
 
 const BoardSection = types.model('BoardSection', {
@@ -32,13 +33,17 @@ const Board = types.model('Board', {
 })
 
 const BoardStore = types.model('BoardStore', {
-    boards: types.array(Board),
+    boards: types.optional(types.array(Board), []),
     active: types.safeReference(Board)
-}).actions(self => {
+}).views(self => ({
+    get list() {
+        return self.boards.map(({id, title}) => ({id, title}))
+    }
+})).actions(self => {
     return {
         load: flow(function* () {
             self.boards = yield apiCall.get('boards')
-            self.active = ''
+            self.active = 'MAIN'
         }),
         afterCreate() {
             self.load()
