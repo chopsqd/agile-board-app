@@ -1,6 +1,6 @@
 import React from 'react';
 import {observer} from "mobx-react-lite";
-import {AppBar, Box, FormControl, Grid, MenuItem, Select, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, FormControl, Grid, Select, Toolbar, Typography} from "@mui/material";
 import useStore from "../../hooks/useStore";
 import User from "../common/User";
 
@@ -22,17 +22,20 @@ const Header = () => {
                                         backgroundColor: '#fff',
                                         marginLeft: 10
                                     }}
+                                    native
                                     value={boards?.active?.id || ''}
-                                    onChange={() => {
+                                    onChange={(event) => {
+                                        const {value} = event.target
+                                        boards.selectBoard(value)
                                     }}
                                 >
-                                    <MenuItem value={''} disabled>
+                                    <option value={''} disabled>
                                         -
-                                    </MenuItem>
+                                    </option>
                                     {boards.list.map(board =>
-                                        <MenuItem key={board.id} value={board?.id}>
+                                        <option key={board.id} value={board?.id}>
                                             {board?.title}
-                                        </MenuItem>
+                                        </option>
                                     )}
                                 </Select>
                             </FormControl>

@@ -125,84 +125,48 @@
     {
       "tasks": [
         {
-          "id": "1111",
-          "title": "Task 1",
-          "description": "Task 1 description",
-          "assignee": "3"
-        },
-        {
-          "id": "ce2eb823-9dbe-4aa5-897f-dae73b89ca56",
-          "title": "asd",
-          "description": "asd",
-          "assignee": "1"
+          "id": "1675449518415",
+          "title": "weg",
+          "description": "ewf",
+          "assignee": "2"
         }
       ],
       "id": "BACKLOG"
     },
     {
-      "tasks": [
-        {
-          "id": "4",
-          "title": "Task 4",
-          "description": "5555",
-          "assignee": "1"
-        },
-        {
-          "id": "1",
-          "title": "Task some task",
-          "description": "Task some task description",
-          "assignee": "2"
-        }
-      ],
+      "tasks": [],
       "id": "OPEN"
     },
     {
       "tasks": [
         {
-          "id": "2",
-          "title": "Task 2",
-          "description": "Task some task description 3",
-          "assignee": "1"
-        },
-        {
-          "id": "22",
-          "title": "Task 2",
-          "description": "Task some task description 3",
-          "assignee": "1"
+          "id": "1675449543881",
+          "title": "Ебать",
+          "description": "Копать",
+          "assignee": "5"
         }
       ],
       "id": "IN_PROGRESS"
     },
     {
-      "tasks": [
-        {
-          "id": "11",
-          "title": "Task 1",
-          "description": "Task 1 description",
-          "assignee": "3"
-        }
-      ],
+      "tasks": [],
       "id": "DONE"
     },
     {
-      "tasks": [
-        {
-          "id": "3",
-          "title": "Task 3",
-          "description": "Task some task description 444",
-          "assignee": "1"
-        },
-        {
-          "id": "5f905127-06c2-439a-b533-5f3b8495d9ad",
-          "title": "User",
-          "description": "asd",
-          "assignee": "9"
-        }
-      ],
       "id": "CLOSED"
     }
   ],
   "board_development_tasks": [
+    {
+      "tasks": [
+        {
+          "id": "2",
+          "title": "Task 2",
+          "description": "Task some task description 3"
+        }
+      ],
+      "id": "BACKLOG"
+    },
     {
       "tasks": [
         {
@@ -211,7 +175,7 @@
           "description": "Task some task description 444"
         }
       ],
-      "id": "BACKLOG"
+      "id": "OPEN"
     },
     {
       "tasks": [
@@ -219,21 +183,6 @@
           "id": "1",
           "title": "Task some task",
           "description": "Task some task description"
-        },
-        {
-          "id": "2",
-          "title": "Task 2",
-          "description": "Task some task description 3"
-        }
-      ],
-      "id": "OPEN"
-    },
-    {
-      "tasks": [
-        {
-          "id": "4",
-          "title": "Task 4",
-          "description": "5555"
         }
       ],
       "id": "IN_PROGRESS"
@@ -244,6 +193,11 @@
           "id": "11",
           "title": "Task 1",
           "description": "Task 1 description"
+        },
+        {
+          "id": "4",
+          "title": "Task 4",
+          "description": "5555"
         }
       ],
       "id": "DONE"
