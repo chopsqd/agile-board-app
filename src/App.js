@@ -1,9 +1,14 @@
+import {observer} from "mobx-react-lite";
+import useStore from "./hooks/useStore";
+
 function App() {
-  return (
-    <div>
-      STart
-    </div>
-  );
+    const {boards} = useStore()
+
+    return (
+        <div>
+            STart
+        </div>
+    );
 }
 
-export default App;
+export default observer(App);
